@@ -1,0 +1,30 @@
+-Iniciar transferencia via FTP
+$ init ftpconnection
+-Autenticar com o servidor FTP
+$ ftpconnection -auth
+-Selecionar modo active (FTP)
+$ ftpconnection -mode active 
+-Selecionar modo passive (FTP)
+$ ftpconnection -mode passive
+-Selecionar o tipo de arquivo à ser usado na conexão 
+BINARIO:
+$ ftpconnection -filetype 1
+ASCII:
+$ ftpconnection -filetype 2
+EBCDIC:
+$ ftpconnection -filetype 3
+-Recuperar arquivo no servidor e salvar em um diretório modo 1 (File)
+$ ftpconnection -ret -f 'nomearquivo' -d 'caminhoàsalvar' 
+-Recuperar arquivo no servidor e salvar em um diretório modo 2 (Stream)
+$ ftpconnection -ret --m -f 'nomearquivo' -d 'caminhoàsalvar'
+-Recuperar arquivo no servidor e printar no console
+$ ftpconnection -ret -f 'nomearquivo'
+-Encerrar conexão com o servidor (Ainda não implementado)
+$ ftpconnection -c
+-Sair da aplicação
+$ quit
+
+--Informações host FTP
+host: ftps4.us.freehostia.com
+usuario: matsil42
+senha: 03369mat
